@@ -1,5 +1,5 @@
 import re
-import math_122.modular
+import numpy
 
 
 class TextFile:
@@ -54,11 +54,7 @@ class TextFile:
         Returns:
             array: A vector containing the text file's char and word count.
         """
-        # Remove numpy dependency to test dependency from Test PYPI instance.
-        # return numpy.array([self.get_char_count(), self.get_word_count()]) * scalar
-        math_122.modular.cube(self.get_char_count())
-        math_122.modular.cube(self.get_word_count())
-        return [self.get_char_count() * scalar, self.get_word_count() * scalar]
+        return numpy.array([self.get_char_count(), self.get_word_count()]) * scalar
 
     def get_text_type(self):
         """
