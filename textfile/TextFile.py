@@ -55,3 +55,15 @@ class TextFile:
             array: A vector containing the text file's char and word count.
         """
         return numpy.array([self.get_char_count(), self.get_word_count()]) * scalar
+
+    def get_text_type(self):
+        """
+        Returns the text file's type.
+
+        Returns:
+            str: The text file's type.
+        """
+        if re.match(r"[0-9]+", self.get_text_content()):
+            return "number"
+        else:
+            return "text"
