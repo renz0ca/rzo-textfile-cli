@@ -15,6 +15,8 @@ def __main__():
         print(file.get_char_count())
     elif args.metric == 1:
         print(file.get_word_count())
+    elif args.metric == 2:
+        print(file.get_text_type())
     elif args.scalar != None:
         print(file.get_file_vector(args.scalar))
     else:
